@@ -1,9 +1,10 @@
 /* eslint comma-dangle: [2, "only-multiline"] */
 
-import React from 'react';
+/* eslint-disable */ import React from 'react'; 
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App';   /* eslint-disable */
+
 
 ReactDOM.render(
   <React.StrictMode>
