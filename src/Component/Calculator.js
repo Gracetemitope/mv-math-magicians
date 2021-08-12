@@ -3,16 +3,17 @@ import React from 'react';
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      result: 0,
+    };
   }
 
-  /* eslint-disable */
   render() {
-     /* eslint-enable */
+    const { result } = this.state;
     return (
       <section className="container mb-3 mt-3">
         <div className="result">
-          <p className="float-right p-4 text-right">0</p>
+          <p className="float-right p-4 text-right">{result}</p>
         </div>
         <div className="calculator d-flex flex-column">
           <div className="calc-row d-flex align-content-stretch">
