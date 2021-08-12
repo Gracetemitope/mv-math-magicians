@@ -1,5 +1,4 @@
 import React from 'react';
-
 /* eslint-disable */
 import Calculator from './Component/Calculator'; 
 /* eslint-enable */
@@ -11,9 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-  /* eslint-disable */
   render() {
-    /* eslint-enable */
     return (
     <div className="App">
     < Calculator />
