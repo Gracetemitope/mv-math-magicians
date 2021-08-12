@@ -1,4 +1,6 @@
-import Calculator from './Component/Calculator';
+/* eslint-disable */
+import Calculator from './Component/Calculator'; 
+/* eslint-enable */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 

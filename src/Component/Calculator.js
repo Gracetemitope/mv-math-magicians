@@ -1,9 +1,16 @@
 import React from 'react';
 
 class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  /* eslint-disable */
   render() {
+     /* eslint-enable */
     return (
-      <section className="container w-50  mb-3 mt-3">
+      <section className="container mb-3 mt-3">
         <div className="result">
           <p className="float-right p-4 text-right">0</p>
         </div>
@@ -39,7 +46,7 @@ class Calculator extends React.Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
