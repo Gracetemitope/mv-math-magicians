@@ -12,10 +12,8 @@ class App extends React.Component {
     };
   }
 /* eslint-disable */
-
   render() {
     /* eslint-enable */
-
     return (
     <div className="App">
     <Calculator />
