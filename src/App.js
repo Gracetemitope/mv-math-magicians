@@ -11,11 +11,14 @@ class App extends React.Component {
     this.state = {
     };
   }
+/* eslint-disable */
 
   render() {
+    /* eslint-enable */
+
     return (
     <div className="App">
-    <Calculator></Calculator>
+    <Calculator />
   </div>
     );
   }

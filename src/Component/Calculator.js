@@ -8,11 +8,10 @@ class Calculator extends React.Component {
   }
 
   render() {
-    const { result } = this.state;
     return (
       <section className="container mb-3 mt-3">
         <div className="result">
-          <p className="float-right p-4 text-right">{result}</p>
+          <p className="float-right p-4 text-right">0</p>
         </div>
         <div className="calculator d-flex flex-column">
           <div className="calc-row d-flex align-content-stretch">
