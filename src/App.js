@@ -10,8 +10,10 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-
+/* eslint-disable */
   render() {
+    /* eslint-enable */
+
     return (
     <div className="App">
     < Calculator />

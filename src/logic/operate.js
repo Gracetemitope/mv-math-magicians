@@ -13,12 +13,11 @@ export default function operate(numberOne, numberTwo, operation) {
     return one.times(two).toString();
   }
   if (operation === '÷') {
-    try{
+    try {
       return one.div(two).toString();
+    } catch (error) {
+      return 'NAN';
     }
-    catch(error) {
-      return "NAN"
-    }  
   }
   if (operation === '%') {
     return one.mod(two).toString();

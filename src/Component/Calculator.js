@@ -8,10 +8,11 @@ class Calculator extends React.Component {
     this.state = {
       total: '',
       next: '',
-      operation: ''
+      operation: '',
     };
   }
-eventHandler(newState) {
+
+  eventHandler(newState) {
     if (newState.total != null) {
       this.setState({ total: newState.total });
     }
@@ -23,10 +24,8 @@ eventHandler(newState) {
     }
   }
 
-
   render() {
-
-   const{total, next, operation} = this.state
+    const { total, next, operation } = this.state;
     return (
       <section className="container mb-3 mt-3">
         <div className="result">
@@ -38,12 +37,12 @@ eventHandler(newState) {
         </div>
         <div className="calculator d-flex flex-column">
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5"  onClick={() => { this.eventHandler(calculate(this.state, 'AC')); }}>AC</button>
+            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, 'AC')); }}>AC</button>
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '+/-')); }}>+/-</button>
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '%')); }}>%</button>
             <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '÷')); }}>÷
 </button>
-          </div> 
+          </div>
           <div className="calc-row d-flex align-content-stretch">
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '7')); }} >7</button>
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '8')); }}>8</button>

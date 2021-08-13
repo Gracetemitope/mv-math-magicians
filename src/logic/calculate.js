@@ -16,9 +16,9 @@ function isNumber(item) {
 export default function calculate(obj, buttonName) {
   if (buttonName === 'AC') {
     return {
-      total: "",
-      next: "",
-      operation: "",
+      total: '',
+      next: '',
+      operation: '',
     };
   }
 
