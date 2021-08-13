@@ -26,7 +26,11 @@ function operate(numberOne, numberTwo, operation) {
   }
 
   if (operation === '÷') {
-    return one.div(two).toString();
+    try {
+      return one.div(two).toString();
+    } catch (error) {
+      return "NAN";
+    }
   }
 
   if (operation === '%') {
