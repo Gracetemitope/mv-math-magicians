@@ -57,7 +57,7 @@ const Calculator = () => {
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '1')); }}>1</button>
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '2')); }}>2</button>
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '3')); }}>3</button>
-            <button className="p-5 orange">+</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '+')); }}>+</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
             <button className="p-5 button-2" onClick={() => { eventHandler(calculate(obj, '0')); }}>0</button>

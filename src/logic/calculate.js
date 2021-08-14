@@ -31,18 +31,18 @@ export default function calculate(obj, buttonName) {
       if (obj.next) {
         return { next: obj.next + buttonName };
       }
-      return { next: buttonName };
+      return { ...obj, next: buttonName };
     }
     // If there is no operation, update next and clear the value
     if (obj.next) {
       return {
         next: obj.next + buttonName,
-        total: null,
+        total: '',
       };
     }
     return {
       next: buttonName,
-      total: null,
+      total: '',
     };
   }
 
@@ -69,8 +69,8 @@ export default function calculate(obj, buttonName) {
     if (obj.next && obj.operation) {
       return {
         total: operate(obj.total, obj.next, obj.operation),
-        next: null,
-        operation: null,
+        next: '',
+        operation: '',
       };
     }
     // '=' with no operation, nothing to do
@@ -99,7 +99,7 @@ export default function calculate(obj, buttonName) {
   if (obj.operation) {
     return {
       total: operate(obj.total, obj.next, obj.operation),
-      next: null,
+      next: '',
       operation: buttonName,
     };
   }
@@ -114,7 +114,7 @@ export default function calculate(obj, buttonName) {
   // save the operation and shift 'next' into 'total'
   return {
     total: obj.next,
-    next: null,
+    next: '',
     operation: buttonName,
   };
 }
