@@ -59,7 +59,7 @@ class Calculator extends React.Component {
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '1')); }}>1</button>
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '2')); }}>2</button>
             <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '3')); }}>3</button>
-            <button className="p-5 orange">+</button>
+            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '+')); }}>+</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
             <button className="p-5 button-2" onClick={() => { this.eventHandler(calculate(this.state, '0')); }}>0</button>
