@@ -8,7 +8,7 @@
 - CSS
 
 ## Screenshot of App
-<img width="763" alt="Leaderboard image" src="https://user-images.githubusercontent.com/58818795/127328461-0fccbf02-fe01-48b2-a5c1-1ee586a32600.png">
+<img width="763" alt="Leaderboard image" src="https://user-images.githubusercontent.com/58818795/129420808-1fb019ed-8d7a-4e9a-9a8a-a46c642cb629.png">
 
 
 ## Getting Started
