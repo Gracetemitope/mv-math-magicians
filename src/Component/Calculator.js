@@ -1,32 +1,30 @@
-import React from 'react';
+/* eslint-disable */
+import React, { useState } from 'react';
+/* eslint-enable */
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.eventHandler = this.eventHandler.bind(this);
-    this.state = {
-      total: '',
-      next: '',
-      operation: '',
-    };
-  }
+const Calculator = () => {
+  const [total, setTotal] = useState('');
+  const [operation, setOperation] = useState('');
+  const [next, setNext] = useState('');
 
-  eventHandler(newState) {
+  const obj = {
+    total,
+    next,
+    operation,
+  };
+  const eventHandler = (newState) => {
     if (newState.total != null) {
-      this.setState({ total: newState.total });
+      setTotal(newState.total);
     }
 
-    this.setState({ next: newState.next });
+    setNext(newState.next);
 
     if (newState.operation != null) {
-      this.setState({ operation: newState.operation });
+      setOperation(newState.operation);
     }
-  }
-
-  render() {
-    const { total, next, operation } = this.state;
-    return (
+  };
+  return (
       <section className="container mb-3 mt-3">
         <div className="result">
           <p className="float-right p-4 text-right">{total}  { ' ' }
@@ -37,39 +35,38 @@ class Calculator extends React.Component {
         </div>
         <div className="calculator d-flex flex-column">
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, 'AC')); }}>AC</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '+/-')); }}>+/-</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '%')); }}>%</button>
-            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '÷')); }}>÷
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, 'AC')); }}>AC</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '+/-')); }}>+/-</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '%')); }}>%</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '÷')); }}>÷
 </button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '7')); }} >7</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '8')); }}>8</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '9')); }}>9</button>
-            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, 'x')); }}>x</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '7')); }} >7</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '8')); }}>8</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '9')); }}>9</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, 'x')); }}>x</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '4')); }}>4</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '5')); }}>5</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '6')); }}>6</button>
-            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '-')); }}>-</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '4')); }}>4</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '5')); }}>5</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '6')); }}>6</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '-')); }}>-</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '1')); }}>1</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '2')); }}>2</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '3')); }}>3</button>
-            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '+')); }}>+</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '1')); }}>1</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '2')); }}>2</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '3')); }}>3</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '+')); }}>+</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
-            <button className="p-5 button-2" onClick={() => { this.eventHandler(calculate(this.state, '0')); }}>0</button>
-            <button className="p-5" onClick={() => { this.eventHandler(calculate(this.state, '.')); }}>.</button>
-            <button className="p-5 orange" onClick={() => { this.eventHandler(calculate(this.state, '=')); }}>=</button>
+            <button className="p-5 button-2" onClick={() => { eventHandler(calculate(obj, '0')); }}>0</button>
+            <button className="p-5" onClick={() => { eventHandler(calculate(obj, '.')); }}>.</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '=')); }}>=</button>
           </div>
         </div>
       </section>
-    );
-  }
-}
+  );
+};
 
 export default Calculator;
