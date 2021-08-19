@@ -15,15 +15,6 @@ const Calculator = () => {
     operation: soperation,
   };
   const eventHandler = (newState) => {
-    // if (newState.total != null) {
-    //   setTotal(newState.total);
-    // }
-
-    // setNext(newState.next);
-
-    // if (newState.operation != null) {
-    //   setOperation(newState.operation);
-    // }
     const eventhere = updateObject(obj, newState);
     setNext(eventhere.next);
     setOperation(eventhere.operation);
