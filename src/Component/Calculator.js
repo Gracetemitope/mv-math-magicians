@@ -2,35 +2,31 @@
 import React, { useState } from 'react';
 /* eslint-enable */
 import calculate from '../logic/calculate';
+import updateObject from '../logic/update';
 
 const Calculator = () => {
-  const [total, setTotal] = useState('');
-  const [operation, setOperation] = useState('');
-  const [next, setNext] = useState('');
+  const [stotal, setTotal] = useState('');
+  const [soperation, setOperation] = useState('');
+  const [snext, setNext] = useState('');
 
   const obj = {
-    total,
-    next,
-    operation,
+    total: stotal,
+    next: snext,
+    operation: soperation,
   };
   const eventHandler = (newState) => {
-    if (newState.total != null) {
-      setTotal(newState.total);
-    }
-
-    setNext(newState.next);
-
-    if (newState.operation != null) {
-      setOperation(newState.operation);
-    }
+    const eventhere = updateObject(obj, newState);
+    setNext(eventhere.next);
+    setOperation(eventhere.operation);
+    setTotal(eventhere.total);
   };
   return (
       <section className="container mb-3 mt-3">
         <div className="result">
-          <p className="float-right p-4 text-right">{total}  { ' ' }
-            { operation }
+          <p className="float-right p-4 text-right">{stotal}  { ' ' }
+            { soperation }
             { ' ' }
-            { next }
+            { snext }
 </p>
         </div>
         <div className="calculator d-flex flex-column">
@@ -38,8 +34,7 @@ const Calculator = () => {
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, 'AC')); }}>AC</button>
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '+/-')); }}>+/-</button>
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '%')); }}>%</button>
-            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '÷')); }}>÷
-</button>
+            <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '÷')); }}>÷</button>
           </div>
           <div className="calc-row d-flex align-content-stretch">
             <button className="p-5" onClick={() => { eventHandler(calculate(obj, '7')); }} >7</button>
