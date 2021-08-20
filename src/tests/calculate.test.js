@@ -51,4 +51,13 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ total: '5', next: '', operation: ''});
   });
+
+  test('divides 4 ÷ 2 to equal 2', () => {
+    let calculator = calculate({}, '4');
+    calculator = calculate(calculator, '÷');
+    calculator = calculate(calculator, '2');
+    calculator = calculate(calculator, '=');
+
+    expect(calculator).toEqual({ total: '2', next: '', operation: ''});
+  });
 });
