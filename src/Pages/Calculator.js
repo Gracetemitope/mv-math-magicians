@@ -21,9 +21,10 @@ const Calculator = () => {
     setTotal(eventhere.total);
   };
   return (
-      <section className="container mb-3 mt-3">
+      <section className="container w-50">
+            <p className="text-center">Let's do some Math!</p>
         <div className="result">
-          <p className="float-right p-4 text-right">{stotal}  { ' ' }
+          <p className=" p-4 text-right">{stotal}  { ' ' }
             { soperation }
             { ' ' }
             { snext }
@@ -60,7 +61,9 @@ const Calculator = () => {
             <button className="p-5 orange" onClick={() => { eventHandler(calculate(obj, '=')); }}>=</button>
           </div>
         </div>
+
       </section>
+
   );
 };
 
