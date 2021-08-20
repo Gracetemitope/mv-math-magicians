@@ -40,4 +40,15 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ total: '4', next: '', operation: ''});
   });
+
+  test('multiplies 2.5 x 2 to equal 5', () => {
+    let calculator = calculate({}, '2');
+    calculator = calculate(calculator, '.');
+    calculator = calculate(calculator, '5');
+    calculator = calculate(calculator, 'x');
+    calculator = calculate(calculator, '2');
+    calculator = calculate(calculator, '=');
+
+    expect(calculator).toEqual({ total: '5', next: '', operation: ''});
+  });
 });

@@ -13,6 +13,8 @@ const Calculator = () => {
     operation: soperation,
   };
   const eventHandler = (newState) => {
+    console.log(newState);
+
     const eventhere = updateObject(obj, newState);
     setNext(eventhere.next);
     setOperation(eventhere.operation);
