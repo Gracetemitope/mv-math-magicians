@@ -60,4 +60,13 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ total: '2', next: '', operation: ''});
   });
+
+  test('performs mod operation on 9 % 2, to equal 1', () => {
+    let calculator = calculate({}, '9');
+    calculator = calculate(calculator, '%');
+    calculator = calculate(calculator, '2');
+    calculator = calculate(calculator, '=');
+
+    expect(calculator).toEqual({ total: '1', next: '', operation: ''});
+  });
 });
