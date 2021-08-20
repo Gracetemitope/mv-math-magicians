@@ -1,9 +1,5 @@
-/* eslint max-len: ["error", { "code": 700 }] */
-
-/* eslint-disable */
 import React from 'react';
 import {Footer} from '../Component'
-/* eslint-enable */
 
 const MathQuotes = () => (
         <section>

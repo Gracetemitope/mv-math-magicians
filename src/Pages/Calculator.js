@@ -1,6 +1,4 @@
-/* eslint-disable */
 import React, { useState } from 'react';
-/* eslint-enable */
 import calculate from '../logic/calculate';
 import updateObject from '../logic/update';
 
@@ -22,7 +20,7 @@ const Calculator = () => {
   };
   return (
       <section className="container w-50">
-            <p className="text-center">Let's do some Math!</p>
+            <p className="text-center">Lets do some Math!</p>
         <div className="result">
           <p className=" p-4 text-right">{stotal}  { ' ' }
             { soperation }
