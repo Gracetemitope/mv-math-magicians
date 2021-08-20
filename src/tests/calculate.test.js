@@ -69,4 +69,11 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ total: '1', next: '', operation: ''});
   });
+
+  test('performs +/- operation on 1, to equal -1', () => {
+    let calculator = calculate({}, '1');
+    calculator = calculate(calculator, '+/-');
+
+    expect(calculator).toEqual({ next: '-1' });
+  });
 });
