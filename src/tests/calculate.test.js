@@ -22,4 +22,13 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ total: '2', next: '', operation: ''});
   });
+
+  test('adds 1 - 1 to equal 0', () => {
+    let calculator = calculate({}, '1');
+    calculator = calculate(calculator, '-');
+    calculator = calculate(calculator, '1');
+    calculator = calculate(calculator, '=');
+
+    expect(calculator).toEqual({ total: '0', next: '', operation: ''});
+  });
 });
