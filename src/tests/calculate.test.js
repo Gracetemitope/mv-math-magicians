@@ -85,4 +85,19 @@ describe('returns updated calculator data object', () => {
 
     expect(calculator).toEqual({ next: '-1' });
   });
+
+  test('returns 0. for .', () => {
+    let calculator = calculate({}, '.');
+    expect(calculator).toEqual({ total: '0.' });
+  });
+
+  test('returns final result of 5 x 2 calculation, to equal 10', () => {
+    let calculator = calculate({ total: 5, next: '2', operation: 'x'}, '=');
+    expect(calculator).toEqual({ total: '10', next: '', operation: ''});
+  });
+
+  test('returns empty object on =', () => {
+    let calculator = calculate({}, '=');
+    expect(calculator).toEqual({});
+  });
 });
