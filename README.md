@@ -1,4 +1,4 @@
-# mv-Leaderboard
+# mv-math-magicians
 
 > This is a calculator app built with Reactjs. It performs basic math operations 
 
@@ -32,6 +32,13 @@ Start server with:
 
 ```
 npm start
+
+```
+
+Unit Test:
+
+```
+npm run test
 
 ```
 

@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="container w-50"
+>
+  <p
+    className="text-center"
+  >
+    Lets do some Math!
+  </p>
+  <div
+    className="result"
+  >
+    <p
+      className=" p-4 text-right"
+    >
+      
+        
+       
+      
+       
+      
+    </p>
+  </div>
+  <div
+    className="calculator d-flex flex-column"
+  >
+    <div
+      className="calc-row d-flex align-content-stretch"
+    >
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        AC
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        +/-
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        %
+      </button>
+      <button
+        className="p-5 orange"
+        onClick={[Function]}
+      >
+        ÷
+      </button>
+    </div>
+    <div
+      className="calc-row d-flex align-content-stretch"
+    >
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        7
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        8
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        9
+      </button>
+      <button
+        className="p-5 orange"
+        onClick={[Function]}
+      >
+        x
+      </button>
+    </div>
+    <div
+      className="calc-row d-flex align-content-stretch"
+    >
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        4
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        5
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        6
+      </button>
+      <button
+        className="p-5 orange"
+        onClick={[Function]}
+      >
+        -
+      </button>
+    </div>
+    <div
+      className="calc-row d-flex align-content-stretch"
+    >
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        3
+      </button>
+      <button
+        className="p-5 orange"
+        onClick={[Function]}
+      >
+        +
+      </button>
+    </div>
+    <div
+      className="calc-row d-flex align-content-stretch"
+    >
+      <button
+        className="p-5 button-2"
+        onClick={[Function]}
+      >
+        0
+      </button>
+      <button
+        className="p-5"
+        onClick={[Function]}
+      >
+        .
+      </button>
+      <button
+        className="p-5 orange"
+        onClick={[Function]}
+      >
+        =
+      </button>
+    </div>
+  </div>
+</section>
+`;
