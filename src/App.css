@@ -1,0 +1,43 @@
+.result {
+  background-color: grey;
+  width: 82.8%;
+  height: 5rem;
+  align-content: flex-end;
+}
+
+p {
+  font-size: 30px;
+  bottom: 0;
+}
+
+.calculator {
+  width: 100%;
+}
+
+.calc-row {
+  height: 5rem;
+}
+
+.calc-row > button {
+  width: 9rem;
+  border: 1px solid lightgray;
+}
+
+.button-2 {
+  width: 18rem !important;
+}
+
+.orange {
+  background-color: rgb(255, 153, 0);
+}
+
+footer {
+  position: fixed;
+  background-color: rgb(230, 224, 224);
+  bottom: 0;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+}
